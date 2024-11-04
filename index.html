@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -31,7 +30,6 @@
         .right-icon {
             width: 50%; /* 缩小50% */
             height: 50%;
-            max-height: 25px; /* 最大高度调整为25px */
         }
         .container {
             width: 80%; /* 缩窄宽度 */
@@ -69,7 +67,7 @@
         .info span {
             text-align: left; /* 左对齐 */
             flex: 1;
-            color: #666; /* 设置为灰色 */
+            color: #000;
             margin-left: 10px; /* 与标签有一定的间距 */
         }
         .footer {
@@ -80,17 +78,39 @@
             line-height: 1.6em;
             margin-top: auto; /* 确保显示在页面最下端 */
         }
+        .control-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .control-buttons button {
+            padding: 10px 20px;
+            font-size: 0.9em;
+            cursor: pointer;
+        }
     </style>
     <script>
-        function goBack() {
-            window.history.back();
+        function closePage() {
+            if (typeof WeixinJSBridge === 'object' && typeof WeixinJSBridge.call === 'function') {
+                WeixinJSBridge.call('closeWindow');
+            } else {
+                window.close();
+            }
+        }
+
+        function moveContent(id, amount) {
+            const element = document.getElementById(id);
+            if (element) {
+                const currentMarginLeft = parseInt(element.style.marginLeft || 0);
+                element.style.marginLeft = (currentMarginLeft + amount) + 'px';
+            }
         }
     </script>
 </head>
 <body>
     <div class="header">
-        <img src="https://www.helloimg.com/i/2024/11/04/67289a6264d03.png" alt="左上角图标" class="left-icon" onclick="goBack()">
-        <img src="https://www.helloimg.com/i/2024/11/04/67289a6507ce1.png" alt="右上角图标" class="right-icon" onclick="goBack()">
+        <img src="https://www.helloimg.com/i/2024/11/04/67289a6264d03.png" alt="左上角图标" class="left-icon" onclick="closePage()">
+        <img src="https://www.helloimg.com/i/2024/11/04/67289a6507ce1.png" alt="右上角图标" class="right-icon" onclick="closePage()">
     </div>
 
     <div class="container">
@@ -99,15 +119,24 @@
         
         <div class="info">
             <label>发票号码</label>
-            <span>24412000000160936827</span>
+            <span id="invoice-number" style="margin-left: 10px;">24412000000160936827</span>
         </div>
         <div class="info">
             <label>合计金额</label>
-            <span>¥188440.24 (含税)</span>
+            <span id="total-amount" style="margin-left: 10px;">¥188440.24 (含税)</span>
         </div>
         <div class="info">
             <label>开票日期</label>
-            <span>2024.09.20</span>
+            <span id="issue-date" style="margin-left: 10px;">2024.09.20</span>
+        </div>
+
+        <div class="control-buttons">
+            <button onclick="moveContent('invoice-number', -10)">左移10px (发票号码)</button>
+            <button onclick="moveContent('invoice-number', 10)">右移10px (发票号码)</button>
+            <button onclick="moveContent('total-amount', -10)">左移10px (合计金额)</button>
+            <button onclick="moveContent('total-amount', 10)">右移10px (合计金额)</button>
+            <button onclick="moveContent('issue-date', -10)">左移10px (开票日期)</button>
+            <button onclick="moveContent('issue-date', 10)">右移10px (开票日期)</button>
         </div>
     </div>
 
