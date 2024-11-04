@@ -1,25 +1,77 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>å‘ç¥¨ä¿¡æ¯</title>
     <style>
-        /* È·±£Í¼Æ¬ÔÚ²»Í¬Éè±¸ÉÏ¶¼ÄÜºÜºÃµØÏÔÊ¾ */
-        img {
-            max-width: 100%;  /* Í¼Æ¬µÄ×î´ó¿í¶ÈÎªÈİÆ÷µÄ100% */
-            height: auto;     /* ¸ß¶È×Ô¶¯µ÷ÕûÒÔ±£³ÖÔ­Ê¼¿í¸ß±È */
-            display: block;   /* È¥³ıµ×²¿Ä¬ÈÏ¿Õ°× */
-            margin: 0 auto;   /* Ë®Æ½¾ÓÖĞ */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: white;
+        }
+        
+        h1, p {
+            text-align: center;
+            color: black;
         }
 
-        body {
-            margin: 0; /* ÒÆ³ıÄ¬ÈÏµÄbody±ß¾à */
-            padding: 0; /* ÒÆ³ıÄ¬ÈÏµÄbodyÄÚ±ß¾à */
+        .invoice-info {
+            width: 90%;
+            max-width: 600px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .row {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .label, .value {
+                width: 100%;
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- ²åÈëÍ¼Æ¬ -->
-    <img src="https://www.helloimg.com/i/2024/10/28/671f3daf3e2da.jpg" alt="ÃÀÀöµÄ·ç¾°">
+    <h1>å‘ç¥¨ä¿¡æ¯</h1>
+    <p>ä»¥ä¸‹ä¿¡æ¯ä»…ä¸ºå‘ç¥¨äºŒç»´ç æ‰€å«ä¿¡æ¯ï¼Œå¹¶ä¸ä»£è¡¨æŸ¥éªŒå‘ç¥¨çœŸä¼ªçš„ç»“æœã€‚</p>
+    
+    <div class="invoice-info">
+        <div class="row">
+            <span class="label">å‘ç¥¨å·ç </span>
+            <span class="value">24412000000160936827</span>
+        </div>
+        <div class="row">
+            <span class="label">åˆè®¡é‡‘é¢</span>
+            <span class="value">Â¥188440.24(å«ç¨)</span>
+        </div>
+        <div class="row">
+            <span class="label">å¼€ç¥¨æ—¥æœŸ</span>
+            <span class="value">2024.09.20</span>
+        </div>
+    </div>
+
+    <footer style="margin-top: auto;">
+        <p>å¦‚éœ€æŸ¥éªŒå‘ç¥¨çœŸä¼ªï¼Œè¯·é€šè¿‡ç¨åŠ¡æœºå…³æä¾›çš„å®˜æ–¹æ¸ é“è¿›è¡ŒæŸ¥éªŒã€‚</p>
+    </footer>
 </body>
 </html>
