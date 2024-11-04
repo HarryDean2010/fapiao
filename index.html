@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             color: #333;
@@ -18,50 +22,50 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 15px;
+            padding: 2% 3%; /* 使用百分比 */
             background-color: #fff; /* 背景色设置为白色 */
         }
         .left-icon, .right-icon {
             cursor: pointer;
         }
         .left-icon {
-            width: 24px;
-            height: 24px;
+            width: 5%; /* 使用百分比 */
+            height: 5%; /* 使用百分比 */
         }
         .right-icon {
-            width: 30%; /* 缩小50% */
-            height: 30%;
+            width: 10%; /* 使用百分比 */
+            height: 10%; /* 使用百分比 */
         }
         .container {
             width: 80%; /* 缩窄宽度 */
             max-width: 350px;
             margin: 0 auto;
             text-align: center;
-            padding-top: 10px;
+            padding-top: 2%; /* 使用百分比 */
         }
         .title {
             font-size: 1.4em;
             font-weight: bold;
             color: #000;
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin-top: 2%; /* 使用百分比 */
+            margin-bottom: 5%; /* 使用百分比 */
         }
         .subtitle {
             font-size: 0.95em;
             color: #000;
-            margin: 0 0 25px 0;
+            margin: 0 0 10% 0; /* 使用百分比 */
             line-height: 1.6em;
-            max-width: 300px; /* 控制文本框宽窄 */
+            max-width: 90%; /* 控制文本框宽窄 */
             width: 100%;
             margin-left: auto;
             margin-right: auto;
         }
         .info {
-            margin: 10px 0;
+            margin: 2% 0; /* 使用百分比 */
             font-size: 1em;
             display: flex;
             justify-content: space-between;
-            padding: 0 10px;
+            padding: 0 3%; /* 使用百分比 */
             line-height: 1.5em;
         }
         .info label {
@@ -79,13 +83,41 @@
             font-size: 0.8em;
             color: #b1b1b1; /* 设置为#b1b1b1 */
             text-align: center;
-            padding: 15px 10px;
+            padding: 2% 3%; /* 使用百分比 */
             line-height: 1.6em;
             margin-top: auto; /* 确保显示在页面最下端 */
-            max-width: 300px; /* 控制文本框宽窄 */
+            max-width: 90%; /* 控制文本框宽窄 */
             width: 100%;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        /* 媒体查询，针对不同屏幕尺寸 */
+        @media screen and (max-width: 600px) {
+            .header {
+                padding: 5% 8%; /* 更大的内边距 */
+            }
+            .left-icon, .right-icon {
+                width: 10%; /* 更大尺寸 */
+                height: 10%; /* 更大尺寸 */
+            }
+            .container {
+                width: 90%; /* 更宽的容器 */
+            }
+            .title {
+                margin-top: 5%; /* 更大的间距 */
+                margin-bottom: 10%; /* 更大的间距 */
+            }
+            .subtitle {
+                margin: 0 0 15% 0; /* 更大的间距 */
+            }
+            .info {
+                margin: 3% 0; /* 更大的间距 */
+                padding: 0 5%; /* 更大的内边距 */
+            }
+            .footer {
+                padding: 3% 5%; /* 更大的内边距 */
+            }
         }
     </style>
     <script>
@@ -105,23 +137,23 @@
     </div>
 
     <div class="container">
-        <div class="title" style="margin-top: 10px; margin-bottom: 30px;">发票信息</div>
-        <div class="subtitle" style="margin-top: 0; margin-bottom: 50px;">以下信息仅为发票二维码所含信息，并不代表查验发票真伪的结果。</div>
+        <div class="title">发票信息</div>
+        <div class="subtitle">以下信息仅为发票二维码所含信息，并不代表查验发票真伪的结果。</div>
         
-        <div class="info" style="margin-top: 10px; margin-bottom: 10px;">
+        <div class="info">
             <label>发票号码</label>
             <span id="invoice-number" style="transform: translateX(10px);">24412000000160936827</span>
         </div>
-        <div class="info" style="margin-top: 10px; margin-bottom: 10px;">
+        <div class="info">
             <label>合计金额</label>
             <span id="total-amount" style="transform: translateX(-25px);">¥188440.24 (含税)</span>
         </div>
-        <div class="info" style="margin-top: 10px; margin-bottom: 10px;">
+        <div class="info">
             <label>开票日期</label>
             <span id="issue-date" style="transform: translateX(-25px);">2024.09.20</span>
         </div>
     </div>
 
-    <div class="footer" style="margin-top: auto;">如需查验发票真伪，请通过税务机关提供的官方渠道进行查验。</div>
+    <div class="footer">如需查验发票真伪，请通过税务机关提供的官方渠道进行查验。</div>
 </body>
 </html>
