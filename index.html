@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -28,8 +29,8 @@
             height: 24px;
         }
         .right-icon {
-            width: 50%; /* 缩小50% */
-            height: 50%;
+            width: 10%; 
+            height: 10%;
         }
         .container {
             width: 80%; /* 缩窄宽度 */
@@ -78,16 +79,6 @@
             line-height: 1.6em;
             margin-top: auto; /* 确保显示在页面最下端 */
         }
-        .control-buttons {
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-around;
-        }
-        .control-buttons button {
-            padding: 10px 20px;
-            font-size: 0.9em;
-            cursor: pointer;
-        }
     </style>
     <script>
         function closePage() {
@@ -95,14 +86,6 @@
                 WeixinJSBridge.call('closeWindow');
             } else {
                 window.close();
-            }
-        }
-
-        function moveContent(id, amount) {
-            const element = document.getElementById(id);
-            if (element) {
-                const currentMarginLeft = parseInt(element.style.marginLeft || 0);
-                element.style.marginLeft = (currentMarginLeft + amount) + 'px';
             }
         }
     </script>
@@ -123,20 +106,11 @@
         </div>
         <div class="info">
             <label>合计金额</label>
-            <span id="total-amount" style="margin-left: 10px;">¥188440.24 (含税)</span>
+            <span id="total-amount" style="margin-left: 20px;">¥188440.24 (含税)</span>
         </div>
         <div class="info">
             <label>开票日期</label>
-            <span id="issue-date" style="margin-left: 10px;">2024.09.20</span>
-        </div>
-
-        <div class="control-buttons">
-            <button onclick="moveContent('invoice-number', -10)">左移10px (发票号码)</button>
-            <button onclick="moveContent('invoice-number', 10)">右移10px (发票号码)</button>
-            <button onclick="moveContent('total-amount', -10)">左移10px (合计金额)</button>
-            <button onclick="moveContent('total-amount', 10)">右移10px (合计金额)</button>
-            <button onclick="moveContent('issue-date', -10)">左移10px (开票日期)</button>
-            <button onclick="moveContent('issue-date', 10)">右移10px (开票日期)</button>
+            <span id="issue-date" style="margin-left: 20px;">2024.09.20</span>
         </div>
     </div>
 
