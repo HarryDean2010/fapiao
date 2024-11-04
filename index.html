@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -18,7 +19,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px 15px;
-            background-color: #f8f8f8;
+            background-color: #fff; /* 背景色设置为白色 */
         }
         .left-icon, .right-icon {
             cursor: pointer;
@@ -28,9 +29,9 @@
             height: 24px;
         }
         .right-icon {
-            width: auto;
-            height: auto;
-            max-height: 50px;
+            width: 50%; /* 缩小50% */
+            height: 50%;
+            max-height: 25px; /* 最大高度调整为25px */
         }
         .container {
             width: 80%; /* 缩窄宽度 */
