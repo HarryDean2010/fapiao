@@ -29,8 +29,8 @@
             height: 24px;
         }
         .right-icon {
-            width: 50%; /* 缩小50% */
-            height: 50%;
+            width: 30%; /* 缩小50% */
+            height: 30%;
         }
         .container {
             width: 80%; /* 缩窄宽度 */
@@ -82,6 +82,10 @@
             padding: 15px 10px;
             line-height: 1.6em;
             margin-top: auto; /* 确保显示在页面最下端 */
+            max-width: 300px; /* 控制文本框宽窄 */
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
     <script>
@@ -101,8 +105,8 @@
     </div>
 
     <div class="container">
-        <div class="title" style="margin-top: 10px; margin-bottom: 50px;">发票信息</div>
-        <div class="subtitle" style="margin-top: 0; margin-bottom: 30px;">以下信息仅为发票二维码所含信息，并不代表查验发票真伪的结果。</div>
+        <div class="title" style="margin-top: 10px; margin-bottom: 30px;">发票信息</div>
+        <div class="subtitle" style="margin-top: 0; margin-bottom: 50px;">以下信息仅为发票二维码所含信息，并不代表查验发票真伪的结果。</div>
         
         <div class="info" style="margin-top: 10px; margin-bottom: 10px;">
             <label>发票号码</label>
@@ -110,11 +114,11 @@
         </div>
         <div class="info" style="margin-top: 10px; margin-bottom: 10px;">
             <label>合计金额</label>
-            <span id="total-amount" style="transform: translateX(-10px);">¥188440.24 (含税)</span>
+            <span id="total-amount" style="transform: translateX(-25px);">¥188440.24 (含税)</span>
         </div>
         <div class="info" style="margin-top: 10px; margin-bottom: 10px;">
             <label>开票日期</label>
-            <span id="issue-date" style="transform: translateX(-10px);">2024.09.20</span>
+            <span id="issue-date" style="transform: translateX(-25px);">2024.09.20</span>
         </div>
     </div>
 
