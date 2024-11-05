@@ -19,22 +19,24 @@
             min-height: 100vh;
         }
         .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            position: relative;
             padding: 2% 3%; /* 使用百分比 */
             background-color: #fff; /* 背景色设置为白色 */
         }
         .left-icon, .right-icon {
             cursor: pointer;
+            position: absolute;
+            top: 5%; /* 向上移动5% */
         }
         .left-icon {
             width: 5.5vw; /* 缩小40% */
             height: 5.5vw; /* 缩小40% */
+            left: 5%; /* 向左移动5% */
         }
         .right-icon {
             width: 23vw; /* 缩小75% */
             height: 8vw; /* 缩小75% */
+            right: 5%; /* 向右移动5% */
         }
         .container {
             width: 80%; /* 缩窄宽度 */
@@ -61,7 +63,7 @@
             text-align: center; /* 确保居中 */
         }
         .info-container {
-            margin-top: 20%; /* 整体往下移动30% */
+            margin-top: 20%; /* 整体往下移动20% */
         }
         .info {
             margin: 2% 0; /* 使用百分比 */
@@ -104,10 +106,12 @@
             .left-icon {
                 width: 5.5vw; /* 更大尺寸 */
                 height: 5.5vw; /* 更大尺寸 */
+                left: 5%; /* 向左移动5% */
             }
             .right-icon {
                 width: 23vw; /* 更大尺寸 */
                 height: 8vw; /* 更大尺寸 */
+                right: 5%; /* 向右移动5% */
             }
             .container {
                 width: 90%; /* 更宽的容器 */
@@ -120,7 +124,7 @@
                 margin: 0; /* 更大的间距 */
             }
             .info-container {
-                margin-top: 20%; /* 整体往下移动30% */
+                margin-top: 20%; /* 整体往下移动20% */
             }
             .info {
                 margin: 3% 0; /* 更大的间距 */
