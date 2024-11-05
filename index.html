@@ -18,31 +18,26 @@
             flex-direction: column;
             min-height: 100vh;
         }
-
         .header {
             position: relative;
             padding: 2% 3%; /* 使用百分比 */
             background-color: #fff; /* 背景色设置为白色 */
         }
-
         .left-icon, .right-icon {
             cursor: pointer;
             position: absolute;
             top: 2%; /* 往下移动2% */
         }
-
         .left-icon {
             width: 5.5vw; /* 缩小40% */
             height: 5.5vw; /* 缩小40% */
             left: 3%; /* 向左移动53% */
         }
-
         .right-icon {
             width: 23vw; /* 缩小75% */
             height: 8vw; /* 缩小75% */
             right: 3%; /* 向右移动53% */
         }
-
         .container {
             width: 80%; /* 缩窄宽度 */
             max-width: 350px;
@@ -50,7 +45,6 @@
             text-align: center;
             padding-top: 2%; /* 使用百分比 */
         }
-
         .title {
             font-size: 1.4em;
             font-weight: bold;
@@ -58,7 +52,6 @@
             margin-top: 2%; /* 使用百分比 */
             margin-bottom: 5%; /* 使用百分比 */
         }
-
         .subtitle {
             font-size: 0.95em;
             color: #000;
@@ -69,34 +62,31 @@
             margin-right: auto;
             text-align: center; /* 确保居中 */
         }
-
         .info-container {
             margin-top: 20%; /* 整体往下移动20% */
-            font-size: 1.1em;
+            transform-origin: top left; /* 设置缩放基点 */
         }
-
         .info {
             margin: 2% 0; /* 使用百分比 */
-            font-size: 1.1em;
+            font-size: 1em;
             display: flex;
             justify-content: space-between;
             padding: 0 3%; /* 使用百分比 */
             line-height: 1.5em;
             text-align: left; /* 左对齐 */
+            transform-origin: top left; /* 设置缩放基点 */
         }
-
         .info label {
             text-align: left;
             flex: 1;
             color: #808080; /* 设置为#808080 */
         }
-
         .info span {
             text-align: left; /* 左对齐 */
             flex: 1;
             color: #000;
+            transform: translateX(10px); /* 初始偏移量 */
         }
-
         .footer {
             font-size: 0.8em;
             color: #b1b1b1; /* 设置为#b1b1b1 */
@@ -115,43 +105,35 @@
             .header {
                 padding: 5% 8%; /* 更大的内边距 */
             }
-
             .left-icon {
                 width: 5.5vw; /* 更大尺寸 */
                 height: 5.5vw; /* 更大尺寸 */
                 left: 3%; /* 向左移动53% */
             }
-
             .right-icon {
                 width: 23vw; /* 更大尺寸 */
                 height: 8vw; /* 更大尺寸 */
                 right: 3%; /* 向右移动53% */
             }
-
             .container {
                 width: 90%; /* 更宽的容器 */
             }
-
             .title {
                 margin-top: 5%; /* 更大的间距 */
                 margin-bottom: 10%; /* 更大的间距 */
             }
-
             .subtitle {
                 margin: 0; /* 更大的间距 */
             }
-
             .info-container {
                 margin-top: 20%; /* 整体往下移动20% */
-                font-size: 1.2em;
+                transform: scale(0.9); /* 缩放比例 */
             }
-
             .info {
                 margin: 3% 0; /* 更大的间距 */
                 padding: 0 5%; /* 更大的内边距 */
-                font-size: 1.2em;
+                transform: scale(0.9); /* 缩放比例 */
             }
-
             .footer {
                 padding: 3% 5%; /* 更大的内边距 */
             }
@@ -180,15 +162,15 @@
         <div class="info-container">
             <div class="info">
                 <label>发票号码</label>
-                <span id="invoice-number">              24412000000160936827</span>
+                <span id="invoice-number" style="transform: translateX(5px);">       24412000000160936827</span>
             </div>
             <div class="info">
                 <label>合计金额</label>
-                <span id="total-amount">              ¥188440.24 (含税)</span>
+                <span id="total-amount" style="transform: translateX(-25px);">        ¥188440.24 (含税)</span>
             </div>
             <div class="info">
                 <label>开票日期</label>
-                <span id="issue-date">              2024.09.20</span>
+                <span id="issue-date" style="transform: translateX(-25px);">        2024.09.20</span>
             </div>
         </div>
     </div>
