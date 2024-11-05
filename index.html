@@ -41,7 +41,7 @@
             max-width: 350px;
             margin: 0 auto;
             text-align: center;
-            
+            padding-top: 2%; /* 使用百分比 */
         }
         .title {
             font-size: 1.4em;
@@ -60,9 +60,11 @@
             margin-right: auto;
             text-align: center; /* 确保居中 */
         }
-        .info {
+        .info-container {
             margin-top: 30%; /* 整体往下移动30% */
-            margin-bottom: 2%; /* 使用百分比 */
+        }
+        .info {
+            margin: 2% 0; /* 使用百分比 */
             font-size: 1em;
             display: flex;
             justify-content: space-between;
@@ -117,9 +119,11 @@
             .subtitle {
                 margin: 0; /* 更大的间距 */
             }
-            .info {
+            .info-container {
                 margin-top: 30%; /* 整体往下移动30% */
-                margin-bottom: 3%; /* 更大的间距 */
+            }
+            .info {
+                margin: 3% 0; /* 更大的间距 */
                 padding: 0 5%; /* 更大的内边距 */
             }
             .footer {
@@ -147,17 +151,19 @@
         <div class="title">发票信息</div>
         <div class="subtitle">以下信息仅为发票二维码所含信息，并不代表查验发票真伪的结果。</div>
         
-        <div class="info">
-            <label>发票号码</label>
-            <span id="invoice-number" style="transform: translateX(5px);">24412000000160936827</span>
-        </div>
-        <div class="info">
-            <label>合计金额</label>
-            <span id="total-amount" style="transform: translateX(-25px);">¥188440.24 (含税)</span>
-        </div>
-        <div class="info">
-            <label>开票日期</label>
-            <span id="issue-date" style="transform: translateX(-25px);">2024.09.20</span>
+        <div class="info-container">
+            <div class="info">
+                <label>发票号码</label>
+                <span id="invoice-number" style="transform: translateX(5px);">24412000000160936827</span>
+            </div>
+            <div class="info">
+                <label>合计金额</label>
+                <span id="total-amount" style="transform: translateX(-25px);">¥188440.24 (含税)</span>
+            </div>
+            <div class="info">
+                <label>开票日期</label>
+                <span id="issue-date" style="transform: translateX(-25px);">2024.09.20</span>
+            </div>
         </div>
     </div>
 
