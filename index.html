@@ -3,7 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            position: relative;
+            padding: 2% 3%;
+            background-color: #fff;
+        }
+
+        .left-icon, .right-icon {
+            cursor: pointer;
+            position: absolute;
+            top: 2%;
+        }
+
+        .left-icon {
+            width: 5.5vw;
+            height: 5.5vw;
+            left: 3%;
+        }
+
+        .right-icon {
+            width: 23vw;
+            height: 8vw;
+            right: 3%;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 350px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 2%;
+        }
+
+        .title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #000;
+            margin-top: 2%;
+            margin-bottom: 5%;
+        }
+
+        .subtitle {
+            font-size: 0.95em;
+            color: #000;
+            line-height: 1.6em;
+            max-width: 95%;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .info-container {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 20%;
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            margin: 2% 0;
+            font-size: 1em;
+            line-height: 1.5em;
+            text-align: left;
+        }
+
+        .info label,
+        .info span {
+            white-space: nowrap;
+            flex: 1;
+            word-break: keep-all;
+        }
+
+        .footer {
+            font-size: 0.8em;
+            color: #b1b1b1;
+            text-align: center;
+            padding: 2% 3%;
+            line-height: 1.6em;
+            margin-top: auto;
+            max-width: 85%;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 媒体查询，针对不同屏幕尺寸 */
+        @media screen and (max-width: 600px) {
+            .header {
+                padding: 5% 8%;
+            }
+
+            .left-icon {
+                width: 5.5vw;
+                height: 5.5vw;
+                left: 3%;
+            }
+
+            .right-icon {
+                width: 23vw;
+                height: 8vw;
+                right: 3%;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .title {
+                margin-top: 5%;
+                margin-bottom: 10%;
+            }
+
+            .subtitle {
+                margin: 0;
+            }
+
+            .info-container {
+                width: 250px;
+            }
+
+            .info {
+                margin: 3% 0;
+                padding: 0 5%;
+            }
+
+            .footer {
+                padding: 3% 5%;
+            }
+        }
+    </style>
     <script>
         function closePage() {
             if (typeof WeixinJSBridge === 'object' && typeof WeixinJSBridge.call === 'function') {
